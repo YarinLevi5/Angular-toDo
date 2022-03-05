@@ -1,17 +1,15 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-add-to-do',
   templateUrl: './add-to-do.component.html',
   styleUrls: ['./add-to-do.component.css'],
 })
-export class AddToDoComponent implements OnInit {
-  @Input() placeholder = 'Add to do';
+export class AddToDoComponent {
+  @Input() placeholder = 'Your task';
   @Input() text = '';
-  items: any[] = [];
-  addItem(task: string) {
-    this.items.push({ id: this.items.length, title: task });
-  }
-  constructor() {}
+  @Output() newItemEvent = new EventEmitter<object>();
 
-  ngOnInit(): void {}
+  addItem(task: string) {
+    this.newItemEvent.emit({ title: task });
+  }
 }

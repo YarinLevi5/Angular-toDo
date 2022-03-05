@@ -1,11 +1,4 @@
-<input
-  type="text"
-  [placeholder]="placeholder"
-  data-role="add-task"
-  name="task"
-  #task
-/>
-<button class="addBtn" (click)="addItem(task.value)">{{ text }}</button>
-<li class="item" *ngFor="let item of items">
-  {{ item.title }}
-</li>
+<input type="text" [placeholder]="placeholder" data-role="add-task" #task />
+<button class="addBtn" (click)="addItem(task.value)">
+  {{ text }}
+</button>

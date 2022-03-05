@@ -1,0 +1,11 @@
+nb-card {
+  min-width: 10rem;
+  max-width: 30rem;
+  margin: 0 auto 2rem;
+  font-size: 20px;
+}
+nb-card-header {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-left: 90px;
+}
