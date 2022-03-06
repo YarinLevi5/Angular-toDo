@@ -6,7 +6,10 @@
   ></app-add-to-do>
   <nb-list>
     <nb-list-item *ngFor="let item of items">
-      {{ item.title }}
+      <app-item
+        [title]="item.title"
+        (checkboxEvent)="getCheckboxValue($event)"
+      ></app-item>
     </nb-list-item>
   </nb-list>
 </nb-card>

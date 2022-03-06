@@ -3,9 +3,16 @@ nb-card {
   max-width: 30rem;
   margin: 0 auto 2rem;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nb-card-header {
   font-size: 30px;
   margin-top: 50px;
-  margin-left: 90px;
+}
+
+nb-list-item {
+  font-size: 20px;
+  margin-right: 300px;
 }

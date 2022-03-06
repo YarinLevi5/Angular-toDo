@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -10,5 +10,9 @@ export class ListComponent {
 
   pushItemIntoItemsArray(event: object) {
     this.items.push(event);
+  }
+
+  getCheckboxValue(event: boolean) {
+    console.log(event);
   }
 }

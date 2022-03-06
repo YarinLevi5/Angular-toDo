@@ -1,3 +1,8 @@
-<li class="item">
+<div [ngClass]="{ 'todo-complete': isComplete }">
+  <input
+    type="checkbox"
+    class="todo-checkbox"
+    (change)="toggleCompleteItem()"
+  />
   {{ title }}
-</li>
+</div>

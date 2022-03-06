@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -7,5 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ItemComponent {
   @Input() title = '';
-  @Input() id = '';
+  @Output() checkboxEvent = new EventEmitter<boolean>();
+  isComplete: boolean = false;
+
+  toggleCompleteItem() {
+    this.checkboxEvent.emit((this.isComplete = !this.isComplete));
+  }
 }
